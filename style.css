@@ -1,0 +1,101 @@
+/* Root Variables */
+:root {
+  --brand-color: #00ffcc;
+  --text-primary: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --bg-dark: #0f172a;
+  --radius: 12px;
+  --shadow-soft: 0 10px 30px rgba(0,255,204,0.2);
+}
+
+/* Global */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+}
+a { text-decoration: none; color: var(--brand-color); }
+h1, h2, h3, h4, h5 { font-weight: 600; }
+img { max-width: 100%; }
+
+/* Navbar */
+.navbar .navbar-brand .brand-name {
+  color: var(--brand-color);
+  font-weight: 700;
+}
+.navbar-nav .nav-link {
+  color: var(--text-primary) !important;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--brand-color) !important;
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+}
+.hero .accent {
+  color: var(--brand-color);
+  background: linear-gradient(90deg, #00ffcc, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profile-photo {
+  border: 6px solid #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Sections */
+.section-header h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+.section-header p { color: var(--text-muted); margin-bottom: 2rem; }
+
+/* Skills */
+.skill-progress .progress-bar {
+  background: linear-gradient(90deg, #00ffcc, #00b3ff);
+  color: #000;
+  font-weight: bold;
+}
+
+/* Project Cards */
+.project-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: var(--shadow-soft);
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,255,204,0.3);
+}
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.project-card:hover img { transform: scale(1.05); }
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #00ffcc, #00b3ff);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,255,204,0.7);
+}
+.btn-outline-primary {
+  color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+
+/* Footer */
+.site-footer { background: #0f172a; color: var(--text-muted); }
+.site-footer a { color: var(--brand-color); margin: 0 0.5rem; transition: 0.3s; }
+.site-footer a:hover { color: #00b3ff; transform: scale(1.2); }
+
+/* Responsive */
+@media (max-width: 767px) { .hero { padding: 3rem 0; } }
